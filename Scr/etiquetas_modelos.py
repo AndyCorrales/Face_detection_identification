@@ -23,7 +23,7 @@ for root, dirs, files in os.walk(image_dir):
 			id_ = label_ids[label]
 			print(label_ids)
 			pil_image = Image.open(path).convert("L") # grayscale
-			size = (550, 550)
+			size = (300, 300)
 			final_image = pil_image.resize(size, Image.ANTIALIAS)
 			image_array = np.array(final_image, "uint8")
 			#print(image_array)
