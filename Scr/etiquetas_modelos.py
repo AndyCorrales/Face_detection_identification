@@ -32,7 +32,7 @@ for root, dirs, files in os.walk(image_dir):
 				roi = image_array[y:y+h, x:x+w]
 				x_train.append(roi)
 				y_labels.append(id_)
-with open("pickles/face-labels.pickle", 'wb') as f:
+with open("nombres/etiquetas.pickle", 'wb') as f:
 	pickle.dump(label_ids, f)
 recognizer.train(x_train, np.array(y_labels))
 recognizer.save("entrenadas/caras.yml")
